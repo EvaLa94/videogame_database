@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #222;
+  color: #eee;
+  min-height: 20vh;
+  text-align: center;
+  background: #222222;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: rgba(74, 74, 74, 0.4) 0px 5px, rgba(114, 114, 114, 0.3) 0px 10px, rgba(154, 154, 154, 0.2) 0px 15px, rgba(194, 194, 194, 0.1) 0px 20px, rgba(234, 234, 234, 0.05) 0px 25px;
+          box-shadow: rgba(74, 74, 74, 0.4) 0px 5px, rgba(114, 114, 114, 0.3) 0px 10px, rgba(154, 154, 154, 0.2) 0px 15px, rgba(194, 194, 194, 0.1) 0px 20px, rgba(234, 234, 234, 0.05) 0px 25px;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+body {
+  background-color: #eee;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-size: auto 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem;
+  border-radius: 10px;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
+.card:hover {
+  background-size: auto 220px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card p {
+  background-color: rgba(40, 40, 40, 0.658);
+  color: #eee;
+  padding: 1rem;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
+.card p:hover {
+  font-size: 20px;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+  text-decoration: underline;
+}
+
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.buttons button {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #b4b4b4;
+}
+
+.buttons button:hover {
+  background-color: #505050;
+  color: #eee;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
