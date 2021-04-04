@@ -1,0 +1,16 @@
+//////////////////// VARIABLES ////////////////////
+$white: #eee;
+$gray1: rgb(234, 234, 234);
+$gray2: rgb(194, 194, 194);
+$gray3: rgb(154, 154, 154);
+$gray4: rgb(114, 114, 114);
+$gray5: rgb(74, 74, 74);
+$black: #222;
+
+//////////////////// GENERAL RULES ////////////////////
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}

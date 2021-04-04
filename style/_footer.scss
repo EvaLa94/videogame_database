@@ -1,0 +1,9 @@
+////////////////// FOOTER //////////////////
+footer {
+  min-height: 20vh;
+  background: $black;
+
+  box-shadow: rgba(234, 234, 234, 0.05) 0px -25px,
+    rgba(194, 194, 194, 0.1) 0px -20px, rgba(154, 154, 154, 0.2) 0px -15px,
+    rgba(114, 114, 114, 0.3) 0px -10px, rgba(74, 74, 74, 0.4) 0px -5px;
+}

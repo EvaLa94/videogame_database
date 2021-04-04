@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 header {
@@ -17,12 +18,48 @@ header {
 }
 
 h1 {
-  padding: 1rem;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  font-family: "Press Start 2P", cursive;
+  line-height: 3rem;
+}
+
+h1 span {
+  color: #d85bd8;
+  font-family: "Press Start 2P", cursive;
 }
 
 main {
   background-color: #eee;
   padding-bottom: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form input {
+  background-color: #eee;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+}
+
+form .input {
+  background-color: #eee;
+  color: #222;
+  border: 2px solid #727272;
+  padding: 0rem 1.3rem;
+  font-size: 20px;
+  border-radius: 50px;
+  outline: none;
+  margin: 1rem;
 }
 
 .card {
@@ -106,11 +143,13 @@ main {
   font-size: 18px;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
-  background-color: #b4b4b4;
+  background-color: #9a9a9a;
+  color: #222;
 }
 
 .buttons button:hover {
-  background-color: #505050;
+  font-size: 20px;
+  background-color: #4a4a4a;
   color: #eee;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
@@ -119,7 +158,7 @@ main {
 
 footer {
   min-height: 20vh;
-  background: #222222;
+  background: #222;
   -webkit-box-shadow: rgba(234, 234, 234, 0.05) 0px -25px, rgba(194, 194, 194, 0.1) 0px -20px, rgba(154, 154, 154, 0.2) 0px -15px, rgba(114, 114, 114, 0.3) 0px -10px, rgba(74, 74, 74, 0.4) 0px -5px;
           box-shadow: rgba(234, 234, 234, 0.05) 0px -25px, rgba(194, 194, 194, 0.1) 0px -20px, rgba(154, 154, 154, 0.2) 0px -15px, rgba(114, 114, 114, 0.3) 0px -10px, rgba(74, 74, 74, 0.4) 0px -5px;
 }

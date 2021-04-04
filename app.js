@@ -1,12 +1,12 @@
 ////// https://api.rawg.io/docs  /////
 
-let url = "https://api.rawg.io/api/games";
+let url = new URL("https://api.rawg.io/api/games");
 const root = document.getElementById("root");
-let request = new Request(url);
 
-fetch(new Request(url))
-  .then((response) => response.json())
-  .then((response) => console.log(response));
+//// init ////
+addElements(url);
+
+///////////////////   FUNCTIONS   ///////////////////////////
 
 function createElement(element, content, addclass, destination) {
   let newElement = document.createElement(element);
@@ -42,7 +42,6 @@ function addElements(url) {
       }
     });
 }
-addElements(url);
 
 function clearDiv() {
   while (root.firstChild) {
@@ -60,8 +59,7 @@ previousButton.addEventListener("click", function () {
     .then((response) => {
       if (response.previous) {
         clearDiv();
-        url = response.previous;
-        console.log(url);
+        url = new URL(response.previous);
         addElements(url);
       }
     });
@@ -73,8 +71,7 @@ nextButton.addEventListener("click", function () {
     .then((response) => {
       if (response.next) {
         clearDiv(root);
-        url = response.next;
-        console.log(url);
+        url = new URL(response.next);
         addElements(url);
       }
     });
