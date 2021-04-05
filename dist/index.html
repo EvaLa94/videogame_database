@@ -35,8 +35,10 @@
     <main>
       <form>
         <div class="input">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search..." />
+          <button id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+          <input id="search-bar" type="text" placeholder="Search..." />
         </div>
       </form>
       <div id="root" class="root"></div>
@@ -48,6 +50,7 @@
 
     <footer></footer>
 
-    <script src="main.js"></script>
+    <script type="module" src="../src/index.js"></script>
+    <script type="module" src="../src/search.js"></script>
   </body>
 </html>

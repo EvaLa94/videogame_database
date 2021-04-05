@@ -25,7 +25,7 @@ eval("////// https://api.rawg.io/docs  /////\r\n\r\nlet url = new URL(\"https://
   \***********************/
 /***/ (() => {
 
-eval("console.log(\"ciao\");\r\n\n\n//# sourceURL=webpack://videogame_database/./src/search.js?");
+eval("const searchBar = document.getElementById(\"search-bar\");\r\n\r\nsearchBar.addEventListener(\"submit\", function () {\r\n  console.log(searchBar.value);\r\n  return false;\r\n});\r\n\n\n//# sourceURL=webpack://videogame_database/./src/search.js?");
 
 /***/ })
 

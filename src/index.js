@@ -1,5 +1,4 @@
 ////// https://api.rawg.io/docs  /////
-
 let url = new URL("https://api.rawg.io/api/games");
 const root = document.getElementById("root");
 
@@ -36,10 +35,17 @@ function addElements(url) {
       }
 
       for (let i = 0; i < 20; i++) {
-        let card = createElement("div", "", "card", root);
-        createElement("p", response.results[i].name, "", card);
-        card.style.backgroundImage = `url(${response.results[i].background_image})`;
+        if (response.results[i].name) {
+          let card = createElement("div", "", "card", root);
+          createElement("p", response.results[i].name, "", card);
+          if (response.results[i].background_image) {
+            card.style.backgroundImage = `url(${response.results[i].background_image})`;
+          }
+        }
       }
+    })
+    .catch((error) => {
+      createElement("div", "No results", "error", root);
     });
 }
 
@@ -76,3 +82,6 @@ nextButton.addEventListener("click", function () {
       }
     });
 });
+
+///////////////////   EXPORTS   ///////////////////////////
+export { url, addElements, clearDiv };

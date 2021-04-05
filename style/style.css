@@ -62,6 +62,21 @@ form .input {
   margin: 1rem;
 }
 
+#search-button {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#search-button:hover {
+  cursor: pointer;
+  font-size: 23px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .card {
   height: 200px;
   width: 200px;
@@ -104,7 +119,6 @@ form .input {
 }
 
 .card p:hover {
-  font-size: 20px;
   -webkit-transition: 0.8s all;
   transition: 0.8s all;
   text-decoration: underline;
@@ -124,6 +138,7 @@ form .input {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 80%;
+  min-height: 50vh;
   margin: auto;
 }
 
