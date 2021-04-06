@@ -6,6 +6,38 @@
   font-family: "Quicksand", sans-serif;
 }
 
+#filters {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.filter {
+  background-color: #c2c2c2;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #9a9a9a;
+  border-radius: 5px;
+  color: #222;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter:hover {
+  color: #eee;
+  background-color: #4a4a4a;
+  border: 2px solid #4a4a4a;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 header {
   background-color: #222;
   color: #eee;

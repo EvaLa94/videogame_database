@@ -1,6 +1,9 @@
 ////// https://api.rawg.io/docs  /////
+
+///////////////////   GLOBAL   ///////////////////////////
 let url = new URL("https://api.rawg.io/api/games");
 const root = document.getElementById("root");
+const filters = document.getElementById("filters");
 
 //// init ////
 addElements(url);
@@ -43,16 +46,28 @@ function addElements(url) {
           }
         }
       }
+      //// prova
+      addFilter();
+
+      /// fine prova
     })
-    .catch((error) => {
+    .catch(() => {
       createElement("div", "No results", "error", root);
     });
 }
 
-function clearDiv() {
-  while (root.firstChild) {
-    root.removeChild(root.firstChild);
+function clearDiv(div) {
+  while (div.firstChild) {
+    div.removeChild(div.firstChild);
   }
+}
+
+function addFilter() {
+  clearDiv(filters);
+  url.searchParams.forEach(function (value, key) {
+    createElement("p", `${key}: ${value}`, "filter", filters);
+    console.log(value, key);
+  });
 }
 
 ///////////////////   BUTTONS   ///////////////////////////
@@ -64,7 +79,7 @@ previousButton.addEventListener("click", function () {
     .then((response) => response.json())
     .then((response) => {
       if (response.previous) {
-        clearDiv();
+        clearDiv(root);
         url = new URL(response.previous);
         addElements(url);
       }
