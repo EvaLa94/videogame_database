@@ -10,11 +10,13 @@ addElements(url);
 
 ///////////////////   FUNCTIONS   ///////////////////////////
 
-function createElement(element, content, addclass, destination) {
+function addElement(element, content, arrayClass, destination) {
   let newElement = document.createElement(element);
   newElement.innerHTML = content;
-  if (addclass) {
-    newElement.classList.add(addclass);
+  if (arrayClass) {
+    for (let word of arrayClass) {
+      newElement.classList.add(word);
+    }
   }
   destination.appendChild(newElement);
   return newElement;
@@ -36,23 +38,24 @@ function addElements(url) {
       } else {
         nextButton.hidden = false;
       }
+      // clear div
+      clearDiv(root);
 
+      // create elements
       for (let i = 0; i < 20; i++) {
         if (response.results[i].name) {
-          let card = createElement("div", "", "card", root);
-          createElement("p", response.results[i].name, "", card);
+          let card = addElement("div", "", ["card"], root);
+          addElement("p", response.results[i].name, "", card);
           if (response.results[i].background_image) {
             card.style.backgroundImage = `url(${response.results[i].background_image})`;
           }
         }
       }
-      //// prova
-      addFilter();
 
-      /// fine prova
+      addFilter();
     })
     .catch(() => {
-      createElement("div", "No results", "error", root);
+      addElement("div", "No results", ["error"], root);
     });
 }
 
@@ -65,8 +68,9 @@ function clearDiv(div) {
 function addFilter() {
   clearDiv(filters);
   url.searchParams.forEach(function (value, key) {
-    createElement("p", `${key}: ${value}`, "filter", filters);
-    console.log(value, key);
+    if (key != "page") {
+      addElement("p", `${key}: ${value}`, [`${key}`, "filter"], filters);
+    }
   });
 }
 

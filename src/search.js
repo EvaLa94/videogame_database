@@ -13,6 +13,12 @@ function launchNewSearch(param, value, url) {
   url.searchParams.set("page", 1);
   clearDiv(root);
   addElements(url);
-
-  console.log(url.searchParams.getAll("search"));
 }
+
+////////// FILTERS //////////
+filters.addEventListener("click", function (event) {
+  let target = event.target;
+  url.searchParams.delete(target.classList[0]);
+  url.searchParams.set("page", 1);
+  addElements(url);
+});
